@@ -32,7 +32,7 @@
 						class="bx bx-map"></i> <span key="t-maps">comp_Location</span>
 				</a>
 					<ul class="sub-menu mm-collapse" aria-expanded="false">
-						<li><a href="CompanyStates" key="t-g-maps">State</a></li>
+						<li><a href="Comp_State" key="t-g-maps">State</a></li>
 						<li><a href="CompanyCity" key="t-v-maps">City</a></li>
 					</ul></li>
 			</ul>

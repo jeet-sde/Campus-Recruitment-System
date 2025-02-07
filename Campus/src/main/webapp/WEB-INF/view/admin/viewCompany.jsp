@@ -255,7 +255,7 @@
 
 	<!-- JAVASCRIPT -->
 	<script
-		src="<%=request.getContextPath()%>/adminResource/js/custom/states.js"></script>
+		src="<%=request.getContextPath()%>/adminResource/js/custom/Company.js"></script>
 
 	<script
 		src="<%=request.getContextPath()%>/adminResource/js/jquery.min.js"></script>

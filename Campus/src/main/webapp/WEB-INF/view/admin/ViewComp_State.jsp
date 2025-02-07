@@ -8,7 +8,7 @@
 <head>
 
 <meta charset="utf-8" />
-<title>CRM | Student</title>
+<title>CRM | States</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta content="Premium Multipurpose Admin & Dashboard Template"
 	name="description" />
@@ -78,32 +78,35 @@
 				<div class="container-fluid">
 
 					<!-- start page title -->
-					<div
-						class="page-title-box d-sm-flex align-items-center justify-content-between">
-						<!-- Grouping Users Heading and Breadcrumb together -->
-						<div class="d-flex align-items-center">
-							<!-- Users Heading -->
-							<h4 class="mb-sm-0 font-size-18">Students</h4>
+					<div class="row">
+						<div
+							class="page-title-box d-sm-flex align-items-center justify-content-between">
+							<!-- Grouping State Details and Breadcrumb together -->
+							<div class="d-flex align-items-center">
+								<!-- State Details Heading -->
+								<h4 class="mb-sm-0 font-size-18">State Details</h4>
 
-							<!-- Breadcrumb -->
-							<div class="ms-3">
-								<ol class="breadcrumb m-0">
-									<li class="breadcrumb-item"><a href="index">Home</a></li>
-									<li class="breadcrumb-item active">Student</li>
-								</ol>
+								<!-- Breadcrumb -->
+								<div class="page-title-left ms-3">
+									<ol class="breadcrumb m-0">
+										<li class="breadcrumb-item"><a href="index">Home</a></li>
+										<li class="breadcrumb-item active">States</li>
+									</ol>
+								</div>
 							</div>
-						</div>
 
-						<!-- Right Side Button -->
-						<div class="page-title-right">
-							<button type="button"
-								class="btn btn-primary waves-effect waves-light"
-								data-bs-toggle="modal" data-bs-target="#myModal"
-								onclick="closeModal()">Add</button>
+							<!-- Right Side Button -->
+							<div class="page-title-right">
+								<button type="button"
+									class="btn btn-primary waves-effect waves-light"
+									data-bs-toggle="modal" data-bs-target="#myModal"
+									onclick="closeModal()">Add</button>
+							</div>
 						</div>
 					</div>
 				</div>
 				<!-- end page title -->
+
 
 				<div class="row">
 					<div class="col-12">
@@ -115,45 +118,26 @@
 									<thead>
 										<tr>
 											<th>#</th>
-											<th>Name</th>
-											<th>Mobile Number</th>
-											<th>Email</th>
-											<th>Username</th>
-											<th>Status</th>
+											<th>State</th>
+											<th>Description</th>
 											<th>Action</th>
+
 										</tr>
 									</thead>
 
 									<tbody>
-										<c:forEach items="${userList}" var="i" varStatus="j">
+										<c:forEach items="${Comp_StateList}" var="i" varStatus="j">
 											<tr>
 												<td>${j.count}</td>
-												<td><a class="text-primary"
-													onclick="showInfo('${i.id}')" href="javascript:void(0)">
-														${i.firstName}&nbsp;${i.lastName} </a></td>
-												<td>${i.mobileNumber}</td>
-												<td>${i.email}</td>
-												<td>${i.username}</td>
-												<td><c:if test="${i.loginVO.enabled == '1' }">
-														<div class="form-check form-switch">
-															<input class="form-check-input" type="checkbox"
-																onchange="changeStatus(${i.id},'active')" role="switch"
-																id="flexSwitchCheck${i.id}" checked="checked"
-																title="Active">
-														</div>
-
-													</c:if> <c:if test="${i.loginVO.enabled == '0' }">
-														<div class="form-check form-switch">
-															<input class="form-check-input" type="checkbox"
-																onchange="changeStatus(${i.id},'blocked')" role="switch"
-																id="flexSwitchCheck${i.id}" title="Blocked">
-														</div>
-													</c:if></td>
+												<td>${i.stateName}</td>
+												<td class="truncate-with-tooltip custom-tooltip"
+													data-bs-toggle="tooltip" data-bs-placement="top"
+													title="${i.description}">${i.description}</td>
 												<td><a class="btn-outline-primary"
 													href="javascript:void(0)"
 													onclick="handleClickOfEdit('${i.id}')"> <i
 														class="fas fa-pencil-alt"></i></a>&nbsp;&nbsp; <a
-													class="delete-icon-color" href="deleteUser?id=${i.id}">
+													class="delete-icon-color" href="Comp_deleteState?id=${i.id}">	
 														<i class="fas fa-trash-alt"></i>
 												</a></td>
 											</tr>
@@ -168,6 +152,7 @@
 					<!-- end col -->
 				</div>
 				<!-- end row -->
+
 
 
 
@@ -194,7 +179,7 @@
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h5 class="modal-title" id="myInfoModalLabel">Add User</h5>
+					<h5 class="modal-title" id="myInfoModalLabel">Add State</h5>
 					<button type="button" class="btn-close" data-bs-dismiss="modal"
 						aria-label="Close"></button>
 				</div>
@@ -210,106 +195,59 @@
 
 	<div id="myModal" class="modal fade" tabindex="-1"
 		aria-labelledby="myModalLabel" aria-hidden="true">
-		<div class="modal-dialog modal-lg">
+		<div class="modal-dialog">
 			<div class="modal-content">
-				<f:form id="myForm" action="saveUser" method="post"
-					modelAttribute="UserVO">
+				<f:form id="myForm" action="Comp_saveState" method="post"
+					modelAttribute="Comp_StateVO">
 					<div class="modal-header">
-						<h5 class="modal-title" id="myModalLabel">Add User</h5>
+						<h5 class="modal-title" id="myModalLabel">Add State</h5>
 						<button type="button" class="btn-close" data-bs-dismiss="modal"
 							aria-label="Close"></button>
 					</div>
 					<div class="modal-body">
 
-						<div class="row">
-							<div class="mb-3 col-4">
-								<label for="name" class="form-label">First Name</label>
-								<f:input class="form-control" id="firstName" path="firstName"
-									name="firstName" />
-							</div>
-							<div class="mb-3 col-4">
-								<label for="name" class="form-label">Last Name</label>
-								<f:input class="form-control" id="lastName" path="lastName"
-									name="lastName" />
-							</div>
 
-							<div class="mb-3 col-4">
-								<label class="form-label">Gender</label><br>
-								<f:select path="gender" class="form-select" id="gender">
-									<option value="male">Male</option>
-									<option value="female">Female</option>
-								</f:select>
-							</div>
-						</div>
-						<div class="row">
-							<div class="mb-3 col-4">
-								<label for="mobile" class="form-label">Mobile Number</label>
-								<f:input type="text" class="form-control" id="mobile"
-									path="mobileNumber" name="mobileNumber" />
-							</div>
-							<div class="mb-3 col-4">
-								<label for="email" class="form-label">Email address</label>
-								<f:input type="email" class="form-control" id="email"
-									path="email" name="email" />
-							</div>
 
-							<div class="mb-3 col-4">
-								<label for="username" class="form-label">Username</label>
-								<f:input type="text" class="form-control" id="username"
-									path="username" name="username" />
-							</div>
-						</div>
-						<div class="row">
-							<div class="mb-3 col-6">
-								<label for="state" class="form-label">State</label>
-								<f:select path="stateVO.id" class="form-select" id="stateName"
-									onchange="getCityByState()">
-									<option disabled="disabled" selected="selected">Select
-										State</option>
-									<c:forEach items="${stateList}" var="i">
-										<option value="${i.id}">${i.stateName}</option>
-									</c:forEach>
-								</f:select>
-							</div>
-							<div class="mb-3 col-6">
-								<label for="city" class="form-label">City</label>
-								<f:select path="cityVO.id" class="form-select" id="cityName">
-									<option disabled="disabled" selected="selected">Select
-										City</option>
-								</f:select>
-							</div>
+						<div class="mb-3">
+							<label for="stateName" class="form-label">State Name</label>
+							<f:input type="text" class="form-control" id="stateName"
+								path="stateName" name="stateName" />
 						</div>
 						<div class="mb-3">
-							<label for="address" class="form-label">Address</label>
-							<f:textarea class="form-control" id="address" path="address"
-								name="address" rows="3"></f:textarea>
+							<label for="description" class="form-label">Description</label>
+							<f:textarea class="form-control" id="description"
+								path="description" name="description" />
 						</div>
 					</div>
 					<div class="modal-footer">
+
 						<f:hidden path="id" />
-						<f:hidden path="loginVO.id" name="loginId" id="loginId" />
+						
+
 						<button type="button"
 							class="btn btn-outline-secondary waves-effect"
 							data-bs-dismiss="modal" onclick="closeModal()">Cancel</button>
 						<button type="submit" id="saveBtn"
 							class="btn btn-primary waves-effect waves-light">Add</button>
 					</div>
-
 				</f:form>
+
+
 			</div>
+			<!-- /.modal-content -->
 		</div>
+		<!-- /.modal-dialog -->
 	</div>
 
 
+	<!-- JAVASCRIPT -->
 	<script
-		src="<%=request.getContextPath()%>/adminResource/js/jquery.min.js"></script>
+		src="<%=request.getContextPath()%>/adminResource/js/custom/Comp_State.js"></script>
 	<script
-		src="<%=request.getContextPath()%>/adminResource/js/jquery.toast.min.js"></script>
-	<script
-		src="<%=request.getContextPath()%>/adminResource/js/custom/toaster.js"></script>
+		src="<%=request.getContextPath()%>/adminResource/js/custom/Comp_StateValiation.js"></script>
 
 	<script
-		src="<%=request.getContextPath()%>/adminResource/js/custom/users.js"></script>
+		src="<%=request.getContextPath()%>/adminResource/js/jquery.min.js"></script>
 	<script
 		src="<%=request.getContextPath()%>/adminResource/js/bootstrap.bundle.min.js"></script>
 	<script
@@ -318,10 +256,13 @@
 		src="<%=request.getContextPath()%>/adminResource/js/simplebar.min.js"></script>
 	<script
 		src="<%=request.getContextPath()%>/adminResource/js/waves.min.js"></script>
+
+	<!-- Required datatable js -->
 	<script
 		src="<%=request.getContextPath()%>/adminResource/js/jquery.dataTables.min.js"></script>
 	<script
 		src="<%=request.getContextPath()%>/adminResource/js/dataTables.bootstrap4.min.js"></script>
+	<!-- Buttons examples -->
 	<script
 		src="<%=request.getContextPath()%>/adminResource/js/dataTables.buttons.min.js"></script>
 	<script
@@ -338,16 +279,26 @@
 		src="<%=request.getContextPath()%>/adminResource/js/buttons.print.min.js"></script>
 	<script
 		src="<%=request.getContextPath()%>/adminResource/js/buttons.colVis.min.js"></script>
+
+	<!-- Responsive examples -->
 	<script
 		src="<%=request.getContextPath()%>/adminResource/js/dataTables.responsive.min.js"></script>
 	<script
 		src="<%=request.getContextPath()%>/adminResource/js/responsive.bootstrap4.min.js"></script>
+
+	<!-- Datatable init js -->
 	<script
 		src="<%=request.getContextPath()%>/adminResource/js/datatables.init.js"></script>
+
 	<script src="<%=request.getContextPath()%>/adminResource/js/app.js"></script>
+
+	<!-- validation -->
 	<script
-		src="<%=request.getContextPath()%>/adminResource/js/jquery.validate.min.js"></script>
-		
+		src="<%=request.getContextPath()%>/adminResource/js/custom/Statevalidation.js"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+
+
 
 </body>
 </html>

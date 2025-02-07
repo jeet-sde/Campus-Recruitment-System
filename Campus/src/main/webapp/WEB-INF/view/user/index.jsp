@@ -19,36 +19,7 @@
     <!-- App Css-->
     <link href="<%=request.getContextPath()%>/adminResource/css/app.min.css" rel="stylesheet" type="text/css" />
 
-    <style>
-        .custom-card {
-            max-width: 350px; /* Set the maximum width */
-            margin: 0 auto; /* Center the card */
-        }
-
-        .avatar-md {
-            width: 80px; /* Adjust avatar size */
-            height: 80px;
-        }
-
-        .stats-card {
-            border: 1px solid #e0e0e0;
-            padding: 20px;
-            text-align: center;
-            border-radius: 8px;
-            background: #f8f9fa;
-        }
-
-        .stats-card h5 {
-            margin-bottom: 15px;
-            color: #007bff;
-        }
-
-        @media (max-width: 768px) {
-            .custom-card {
-                max-width: 90%; /* Make the card wider on smaller screens */
-            }
-        }
-    </style>
+    
 </head>
 
 <body data-sidebar="dark">

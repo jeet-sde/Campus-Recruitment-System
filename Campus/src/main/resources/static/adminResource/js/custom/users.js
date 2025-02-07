@@ -272,26 +272,21 @@ function getCityByState(){
 	htp.send();
 }
 function changeStatus(id, status) {
-
     var htp = new XMLHttpRequest();
 
     htp.onreadystatechange = function () {
-
         if (htp.readyState === 4) {
-
-            if (htp.responseText) {
+            if (htp.status === 200) {
                 const s = status === 'active' ? 'Blocked' : 'Active';
                 $(`#flexSwitchCheck${id}`).attr('title', s);
-
-                // Show success toast
                 showSuccessToast('Status changed successfully');
             } else {
-                // Show error toast
                 showErrorToast('Failed to change status');
             }
         }
     }
 
-    htp.open("get", "changeStatus?id=" + id, true);
+    // Ensure the correct URL path here
+    htp.open("get", "/admin/changeStatus?id=" + id, true);  // Double-check the URL
     htp.send();
 }
