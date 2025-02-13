@@ -33,9 +33,18 @@
 				</a>
 					<ul class="sub-menu mm-collapse" aria-expanded="false">
 						<li><a href="Comp_State" key="t-g-maps">State</a></li>
-						<li><a href="CompanyCity" key="t-v-maps">City</a></li>
+						<li><a href="Comp_City" key="t-v-maps">City</a></li>
+				
 					</ul></li>
+					 <li>
+                    <a href="${pageContext.request.contextPath}/admin/about-us" class="waves-effect">
+                        <i class="bx bxs-user-detail"></i>
+                        <span key="t-layouts">About Us</span>
+                    </a>
+                </li>
 			</ul>
+
+			
 		</div>
 	</div>
 </div>
