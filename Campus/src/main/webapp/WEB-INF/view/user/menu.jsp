@@ -8,9 +8,9 @@
 				</a></li>
 
 
-				<li><a href="filemanager" class="waves-effect"> <i
-						class="mdi mdi-google-drive"></i> <span key="t-layouts">My
-							Drive</span>
+				<li><a href="drive" class="waves-effect"> <i
+						class="mdi mdi-google-drive"></i> <span key="t-layouts">
+							Campany</span>
 				</a></li>
 
 				

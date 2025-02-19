@@ -36,6 +36,9 @@
 						<li><a href="Comp_City" key="t-v-maps">City</a></li>
 				
 					</ul></li>
+					<li>  <a href="insertCompany" class="waves-effect"> <i
+						class="bx bxs-user-detail"></i> <span key="t-layouts">insert Company</span>
+				</a></li>
 					 <li>
                     <a href="${pageContext.request.contextPath}/admin/about-us" class="waves-effect">
                         <i class="bx bxs-user-detail"></i>
