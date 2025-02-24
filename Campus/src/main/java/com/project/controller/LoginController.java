@@ -49,6 +49,7 @@ public class LoginController {
 			request.getSession().setAttribute("statusText", "Logout Successfully!");
 		}
 		return "login";
+		
 	}
 
 	/*

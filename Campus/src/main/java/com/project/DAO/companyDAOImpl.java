@@ -10,6 +10,7 @@ import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import com.project.model.InsertCompanyVO;
 import com.project.model.companyVO;
 
 @Repository
@@ -40,7 +41,14 @@ public class companyDAOImpl implements companyDAO {
             e.printStackTrace();
         }
     }
-
+    public void saveCompanypage(InsertCompanyVO InsertCompanyVO) {
+        try {
+            Session session = sessionFactory.getCurrentSession();
+            session.saveOrUpdate(InsertCompanyVO);
+        } catch (HibernateException e) {
+            e.printStackTrace();
+        }
+    }
     // Fetch company by ID (active ones only)
     public List<companyVO> findByCompany(int id) {
         List<companyVO> ls = new ArrayList<companyVO>();
@@ -62,5 +70,26 @@ public class companyDAOImpl implements companyDAO {
         Long count = (Long) sessionFactory.getCurrentSession().createQuery(hql).uniqueResult();
         return count.intValue();
     }
+
+	@Override
+	public void saveComapanypage(InsertCompanyVO InsertCompanyVO) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void saveCompanyInUserDrive(companyVO companyVO) {
+		  try {
+	            Session session = sessionFactory.getCurrentSession();
+	            session.saveOrUpdate(companyVO);
+	        } catch (HibernateException e) {
+	            e.printStackTrace();
+	        }
+		
+	}
+
+	
+   
+
 
 }

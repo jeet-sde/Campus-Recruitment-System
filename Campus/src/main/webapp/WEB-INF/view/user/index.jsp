@@ -44,73 +44,155 @@
                     <!-- Greeting Message -->
                     <div class="row">
                         <div class="col-12 text-center mb-4">
-                            <h3>Hello, User!</h3>
-                            <p class="text-muted">Here's what's happening with your account today.</p>
+                            <h3>Hello, Student!</h3>
+                             <p class="text-muted font-italic">"Success is not the key to happiness. Happiness is the key to success. If you love what you are doing, you will be successful." – Albert Schweitzer</p>
+                    
+                            
                         </div>
                     </div>
-
-                    <div class="row justify-content-center"> <!-- Center the row -->
-                        <div class="col-lg-4 col-md-6"> <!-- Adjust column sizes for responsiveness -->
-                            <div class="card custom-card overflow-hidden">
-                                <div class="bg-primary-subtle">
-                                    <div class="row">
-                                        <div class="col-7">
-                                            <div class="text-primary p-3">
-                                                <h5 class="text-primary">Welcome to Your Dashboard!</h5>
-                                                <p>Manage your files and explore your content.</p>
-                                            </div>
-                                        </div>
-                                        <div class="col-5 align-self-end text-center">
-                                            <img src="<%=request.getContextPath()%>/adminResource/images/profile-img.png" alt="" class="img-fluid" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-body pt-0">
-                                    <div class="text-center">
-                                        <div class="avatar-md profile-user-wid mb-4">
-                                              </div>
-                                        <h5 class="font-size-15 text-truncate">User</h5>
-                                        <p class="text-muted mb-0 text-truncate">User Role</p>
-                                        <div class="mt-4">
-                                              </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-8 col-md-6"> <!-- Adjust column sizes for responsiveness -->
-                            <div class="card">
-                                <div class="card-body">
-                                    <h4 class="card-title mb-4">Recent Activities</h4>
-                                    <p class="text-muted mb-0">You have no recent activities to display.</p>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="row">
+    <div class="col-12">
+        <h5 class="mb-3 text-dark">2025 Companies That Hired Last Year</h5>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card shadow-sm border-0">
+                    <div class="card-body text-center">
+                        <h6 class="mt-2">Valorx</h6>
+                        <span class="badge bg-success">2 Students Placed</span>
                     </div>
+                </div>
+            </div>
 
-                    <!-- Quick Stats Section -->
-                    <div class="row justify-content-center mt-4">
-                        <div class="col-md-4">
-                            <div class="stats-card">
-                                <h5>Total Files</h5>
-                                <h3>2</h3>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="stats-card">
-                                <h5>Storage Used</h5>
-                                <h3>1GB / 50GB</h3>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="stats-card">
-                                <h5>Shared Files</h5>
-                                <h3>0</h3>
-                            </div>
-                        </div>
+            <div class="col-md-3">
+                <div class="card shadow-sm border-0">
+                    <div class="card-body text-center">
+                        <h6 class="mt-2">O2H</h6>
+                        <span class="badge bg-success">8 Students Placed</span>
                     </div>
+                </div>
+            </div>
 
-       
+            <div class="col-md-3">
+                <div class="card shadow-sm border-0">
+                    <div class="card-body text-center">
+                        <h6 class="mt-2">Qsipder</h6>
+                        <span class="badge bg-success">15 Students Placed</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card shadow-sm border-0">
+                    <div class="card-body text-center">
+                        <h6 class="mt-2">MedKart</h6>
+                        <span class="badge bg-success">3 Students Placed</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card shadow-sm border-0">
+                    <div class="card-body text-center">
+                        <h6 class="mt-2">zeus</h6>
+                        <span class="badge bg-success">2 Students Placed</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card shadow-sm border-0">
+                    <div class="card-body text-center">
+                        <h6 class="mt-2">tcs</h6>
+                        <span class="badge bg-success">10 Students Placed</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card shadow-sm border-0">
+                    <div class="card-body text-center">
+                        <h6 class="mt-2">Roima</h6>
+                        <span class="badge bg-success">2 Students Placed</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card shadow-sm border-0">
+                    <div class="card-body text-center">
+                        <h6 class="mt-2">GreyCell</h6>
+                        <span class="badge bg-success">7 Students Placed</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card shadow-sm border-0">
+                    <div class="card-body text-center">
+                        <h6 class="mt-2">Streebo</h6>
+                        <span class="badge bg-success">5 Students Placed</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card shadow-sm border-0">
+                    <div class="card-body text-center">
+                        <h6 class="mt-2">Motodata</h6>
+                        <span class="badge bg-success">5 Students Placed</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card shadow-sm border-0">
+                    <div class="card-body text-center">
+                        <h6 class="mt-2">Teachnook</h6>
+                        <span class="badge bg-success">6 Students Placed</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card shadow-sm border-0">
+                    <div class="card-body text-center">
+                        <h6 class="mt-2">Cognizant</h6>
+                        <span class="badge bg-success">14 Students Placed</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card shadow-sm border-0">
+                    <div class="card-body text-center">
+                        <h6 class="mt-2">HCL</h6>
+                        <span class="badge bg-success">10 Students Placed</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card shadow-sm border-0">
+                    <div class="card-body text-center">
+                        <h6 class="mt-2">Oracle</h6>
+                        <span class="badge bg-success">7 Students Placed</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card shadow-sm border-0">
+                    <div class="card-body text-center">
+                        <h6 class="mt-2">Adobe</h6>
+                        <span class="badge bg-success">6 Students Placed</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+                    
                 </div> <!-- container-fluid -->
             </div> <!-- page-content -->
         </div> <!-- main-content -->

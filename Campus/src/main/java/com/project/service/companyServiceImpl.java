@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.project.DAO.companyDAOImpl;
-
+import com.project.model.InsertCompanyVO;
 import com.project.model.companyVO;
 
 @Service
@@ -28,6 +28,11 @@ public class companyServiceImpl implements companyService {
 		
 	}
 	@Override
+	public void saveCompanypage(InsertCompanyVO InsertCompanyVO) {
+		this.companyDAO.saveComapanypage(InsertCompanyVO);
+		
+	}
+	@Override
 	public void deleteCompany(int id) {
 		List<companyVO> ls = this.companyDAO.findByCompany(id);
 		companyVO companyVO = ls.get(0);
@@ -44,6 +49,12 @@ public class companyServiceImpl implements companyService {
 	@Override
 	public int countCompany() {
 	    return this.companyDAO.countAllCompanies();
+	}
+
+	@Override
+	public void saveCompanyInUserDrive(companyVO companyVO) {
+		this.companyDAO.saveCompanyInUserDrive(companyVO);
+		
 	}
 
 }
