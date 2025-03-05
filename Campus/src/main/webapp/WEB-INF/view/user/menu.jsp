@@ -13,10 +13,12 @@
 							Campany</span>
 				</a></li>
 
-				
 
-
-
+		<li><a href="/user/reset" class="waves-effect"> 
+    <i class="mdi mdi-lock-reset"></i> 
+    <span>Reset Password</span>
+</a></li>
+		
 			</ul>
 		</div>
 	</div>
