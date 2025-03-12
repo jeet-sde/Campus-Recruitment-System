@@ -29,7 +29,39 @@
 
         <jsp:include page="header.jsp"></jsp:include>
         <jsp:include page="menu.jsp"></jsp:include>
-
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+ <style>
+        body {
+            background-color: 
+            color: white;
+        }
+        .sidebar {
+            background-color: #1e1e1e;
+            height: 100vh;
+            padding: 20px;
+        }
+        .sidebar a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .sidebar a.active, .sidebar a:hover {
+            background: linear-gradient(to right, #ff00ff, #8000ff);
+        }
+        .card-custom {
+            background: 
+            padding: 15px;
+            border-radius: 10px;
+        }
+        .badge-custom {
+            background: linear-gradient(to right, #ff00ff, #8000ff);
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
         <div class="main-content">
             <div class="page-content">
                 <div class="container-fluid">
@@ -41,153 +73,62 @@
                         </div>
                     </div>
 
-                    <!-- Greeting Message -->
-                    <div class="row">
-                        <div class="col-12 text-center mb-4">
-                            <h3>Hello, Student!</h3>
-                             <p class="text-muted font-italic">"Success is not the key to happiness. Happiness is the key to success. If you love what you are doing, you will be successful." – Albert Schweitzer</p>
-                    
-                            
-                        </div>
-                    </div>
-                    <div class="row">
-    <div class="col-12">
-        <h5 class="mb-3 text-dark">2025 Companies That Hired Last Year</h5>
-        <div class="row">
-            <div class="col-md-3">
-                <div class="card shadow-sm border-0">
-                    <div class="card-body text-center">
-                        <h6 class="mt-2">Valorx</h6>
-                        <span class="badge bg-success">2 Students Placed</span>
-                    </div>
-                </div>
+                   <div class="col-md-10 p-4">
+                <h2 class="fw-bold">Welcome to <span class="text-warning">Placement Portal</span></h2>
+                <p>Here you get all the details about upcoming companies visiting our college.</p>
+                <div class="row">
+    <!-- First Card -->
+    <div class="col-md-6 col-lg-6">
+        <div class="card shadow-sm border-0">
+            <div class="card-body text-center">
+                <h4 class="text-uppercase">Valorx</h4>
+                <p><i class="fa fa-briefcase"></i> Product Based</p>
+                <p><i class="fa fa-money-bill"></i> 7 lpa</p>
+                <p><i class="fa fa-calendar"></i> Date: 02 Feb 2022</p>
+                <button class="btn badge-custom">Upcoming</button>
             </div>
+        </div>
+    </div>
 
-            <div class="col-md-3">
-                <div class="card shadow-sm border-0">
-                    <div class="card-body text-center">
-                        <h6 class="mt-2">O2H</h6>
-                        <span class="badge bg-success">8 Students Placed</span>
-                    </div>
-                </div>
+    <!-- Second Card -->
+    <div class="col-md-6 col-lg-6">
+        <div class="card shadow-sm border-0">
+            <div class="card-body text-center">
+                <h4 class="text-uppercase">xyz</h4>
+                <p><i class="fa fa-briefcase"></i> PRODUCT Based</p>
+                <p><i class="fa fa-money-bill"></i> CTC: 7 lpa</p>
+                <p><i class="fa fa-calendar"></i> Date: 12 dec 2026</p>
+                <button class="btn badge-custom">Upcoming</button>
             </div>
-
-            <div class="col-md-3">
-                <div class="card shadow-sm border-0">
-                    <div class="card-body text-center">
-                        <h6 class="mt-2">Qsipder</h6>
-                        <span class="badge bg-success">15 Students Placed</span>
-                    </div>
-                </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-lg-6">
+        <div class="card shadow-sm border-0">
+            <div class="card-body text-center">
+                <h4 class="text-uppercase">tcs</h4>
+                <p><i class="fa fa-briefcase"></i> Service Based</p>
+                <p><i class="fa fa-money-bill"></i> CTC: 4-7 lpa</p>
+                <p><i class="fa fa-calendar"></i> Date: 11 dec 2026</p>
+                <button class="btn badge-custom">Upcoming</button>
             </div>
-
-            <div class="col-md-3">
-                <div class="card shadow-sm border-0">
-                    <div class="card-body text-center">
-                        <h6 class="mt-2">MedKart</h6>
-                        <span class="badge bg-success">3 Students Placed</span>
-                    </div>
-                </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-lg-6">
+        <div class="card shadow-sm border-0">
+            <div class="card-body text-center">
+                <h4 class="text-uppercase">abc</h4>
+                <p><i class="fa fa-briefcase"></i> PRODUCT Based</p>
+                <p><i class="fa fa-money-bill"></i> CTC: 10,00,00,000</p>
+                <p><i class="fa fa-calendar"></i> Date: 07 dec 2026</p>
+                <button class="btn badge-custom">Upcoming</button>
             </div>
-
-            <div class="col-md-3">
-                <div class="card shadow-sm border-0">
-                    <div class="card-body text-center">
-                        <h6 class="mt-2">zeus</h6>
-                        <span class="badge bg-success">2 Students Placed</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-3">
-                <div class="card shadow-sm border-0">
-                    <div class="card-body text-center">
-                        <h6 class="mt-2">tcs</h6>
-                        <span class="badge bg-success">10 Students Placed</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-3">
-                <div class="card shadow-sm border-0">
-                    <div class="card-body text-center">
-                        <h6 class="mt-2">Roima</h6>
-                        <span class="badge bg-success">2 Students Placed</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-3">
-                <div class="card shadow-sm border-0">
-                    <div class="card-body text-center">
-                        <h6 class="mt-2">GreyCell</h6>
-                        <span class="badge bg-success">7 Students Placed</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-3">
-                <div class="card shadow-sm border-0">
-                    <div class="card-body text-center">
-                        <h6 class="mt-2">Streebo</h6>
-                        <span class="badge bg-success">5 Students Placed</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-3">
-                <div class="card shadow-sm border-0">
-                    <div class="card-body text-center">
-                        <h6 class="mt-2">Motodata</h6>
-                        <span class="badge bg-success">5 Students Placed</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-3">
-                <div class="card shadow-sm border-0">
-                    <div class="card-body text-center">
-                        <h6 class="mt-2">Teachnook</h6>
-                        <span class="badge bg-success">6 Students Placed</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-3">
-                <div class="card shadow-sm border-0">
-                    <div class="card-body text-center">
-                        <h6 class="mt-2">Cognizant</h6>
-                        <span class="badge bg-success">14 Students Placed</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-3">
-                <div class="card shadow-sm border-0">
-                    <div class="card-body text-center">
-                        <h6 class="mt-2">HCL</h6>
-                        <span class="badge bg-success">10 Students Placed</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-3">
-                <div class="card shadow-sm border-0">
-                    <div class="card-body text-center">
-                        <h6 class="mt-2">Oracle</h6>
-                        <span class="badge bg-success">7 Students Placed</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-3">
-                <div class="card shadow-sm border-0">
-                    <div class="card-body text-center">
-                        <h6 class="mt-2">Adobe</h6>
-                        <span class="badge bg-success">6 Students Placed</span>
-                    </div>
-                </div>
-            </div>
+        </div>
+    </div>
+</div>
+                
+    
+           
+          
 
         </div>
     </div>
@@ -207,6 +148,39 @@
     <script src="<%=request.getContextPath()%>/adminResource/js/simplebar.min.js"></script>
     <script src="<%=request.getContextPath()%>/adminResource/js/waves.min.js"></script>
     <script src="<%=request.getContextPath()%>/adminResource/js/app.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Ensure jQuery is included -->
+
+<script>
+$(document).ready(function () {
+    $(".applied-checkbox").on("change", function () {
+        let companyId = $(this).data("id");  // Get company ID from checkbox
+        let status = $(this).is(":checked"); // Check if checkbox is checked
+
+        console.log("Company ID:", companyId, "New Status:", status); // Debugging
+
+        $.ajax({
+            url: "<%=request.getContextPath()%>/company/updateCompanyStatus", // Ensure this matches your controller mapping
+            type: "POST",
+            data: {
+                companyId: companyId,
+                status: status
+            },
+            success: function (response) {
+                console.log("Success Response:", response);
+                alert("Updated Successfully");
+
+                // Reload dashboard or specific section dynamically
+                $("#dashboardSection").load(location.href + " #dashboardSection"); // Ensure dashboard has an ID
+            },
+            error: function (xhr) {
+                console.error("Error Response:", xhr.responseText);
+                alert("Error updating company status");
+            }
+        });
+    });
+});
+</script>
+    
 </body>
 
 </html>

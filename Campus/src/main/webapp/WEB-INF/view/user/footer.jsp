@@ -5,7 +5,7 @@
 				<script>
                 document.write(new Date().getFullYear());
               </script>
-				© SyncRepo
+				 Campus Recruitment System
 			</div>
 		</div>
 	</div>

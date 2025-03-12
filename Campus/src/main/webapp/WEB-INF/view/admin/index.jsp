@@ -127,17 +127,7 @@
                             </div>
                         </div>
 
-                        <!-- Chart Card -->
-                        <div class="col-xl-4 col-md-10">
-                            <div class="card shadow-sm">
-                                <div class="card-body">
-                                    <h5 class="card-title mb-3">Students vs Companies</h5>
-                                    <canvas id="statsChart" height="200"></canvas>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Dashboard Cards -->
+                       
 
                     <!-- Previous Company Visits -->
                     <div class="row mt-4">
@@ -168,7 +158,39 @@
                                                 </tr>
                                                 <tr>
                                                     <td>2</td>
-                                                    <td>etc</td>
+                                                    <td>IT solution</td>
+                                                    <td>2025</td>
+                                                    <td>software Engineer</td>
+                                                    <td>3-5 LPA</td>
+                                                   
+                                                </tr>
+                                                  <tr>
+                                                    <td>2</td>
+                                                    <td>medkart</td>
+                                                    <td>2025</td>
+                                                    <td>associate software Engineer</td>
+                                                    <td>4 LPA</td>
+                                                   
+                                                </tr>
+                                                      <tr>
+                                                    <td>3</td>
+                                                    <td>abc</td>
+                                                    <td>2025</td>
+                                                    <td>software Engineer</td>
+                                                    <td>3-5 LPA</td>
+                                                   
+                                                </tr>
+                                                      <tr>
+                                                    <td>4</td>
+                                                    <td>abc</td>
+                                                    <td>2025</td>
+                                                    <td>software Engineer</td>
+                                                    <td>3-5 LPA</td>
+                                                   
+                                                </tr>
+                                                      <tr>
+                                                    <td>5</td>
+                                                    <td>abc</td>
                                                     <td>2025</td>
                                                     <td>software Engineer</td>
                                                     <td>3-5 LPA</td>

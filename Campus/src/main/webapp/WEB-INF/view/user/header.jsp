@@ -25,8 +25,8 @@
 
                     <div class="dropdown-divider"></div>
 
-                    <!-- Profile -->
-                    <a class="dropdown-item" href="#">
+                     <!-- Profile -->
+                 <!--   <a class="dropdown-item" href="#">
                         <i class="bx bx-user font-size-16 align-middle me-1"></i> 
                         <span key="t-profile">Profile</span>
                     </a>
@@ -34,7 +34,7 @@
           <a class="dropdown-item" href="<%= request.getContextPath() %>/request-password-reset-form">
     <i class="bx bx-lock-open font-size-16 align-middle me-1"></i> 
     <span key="t-lock-screen">Change Password</span>
-</a>
+</a> -->
           
 
                     <div class="dropdown-divider"></div>
