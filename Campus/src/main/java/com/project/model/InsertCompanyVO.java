@@ -3,7 +3,7 @@ package com.project.model;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "company_tbl11")
+@Table(name = "company_tbl12")
 public class InsertCompanyVO {
 
 	@Id
@@ -28,9 +28,30 @@ public class InsertCompanyVO {
 
 	@Column(name = "location")
 	private String location;
+	
+	@Column(name = "google_form_link", columnDefinition = "TEXT") // Ensures it's stored properly
+    private String googleFormLink;
+
+    // Getters and Setters
+    public String getGoogleFormLink() {
+        return googleFormLink;
+    }
+
+    public void setGoogleFormLink(String googleFormLink) {
+        this.googleFormLink = googleFormLink;
+    }
 
 	
+    private boolean applied; // New field
 
+    // Getters and Setters
+    public boolean isApplied() {
+        return applied;
+    }
+
+    public void setApplied(boolean applied) {
+        this.applied = applied;
+    }
 	
 	public int getId() {
 		return id;

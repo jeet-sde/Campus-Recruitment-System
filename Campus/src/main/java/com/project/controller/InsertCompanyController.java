@@ -25,11 +25,10 @@ public class InsertCompanyController {
     @PostMapping("/admin/saveCompanydetails")
     public String saveCompany1(@ModelAttribute InsertCompanyVO insertCompanyVO, RedirectAttributes redirectAttributes) {
         companyService.saveCompany1(insertCompanyVO);
-
         redirectAttributes.addFlashAttribute("successMessage", "Company details saved successfully!");
-
-        return "redirect:/user/drive"; // Redirect after saving
+        return "redirect:/user/drive";
     }
+
 
     @GetMapping("/user/drive")
     public ModelAndView showDrivePage(@ModelAttribute("successMessage") String successMessage) {
@@ -41,6 +40,11 @@ public class InsertCompanyController {
         
         return modelAndView;
     }
+
+	public void setApplied(boolean status) {
+		// TODO Auto-generated method stub
+		
+	}
   
 
 

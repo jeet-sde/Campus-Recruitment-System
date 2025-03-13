@@ -86,46 +86,53 @@
                             <div class="alert alert-danger">${error}</div>
                         </c:if>
 
-                        <form id="companyForm" action="<%=request.getContextPath()%>/admin/saveCompanydetails" method="post">
-                            
-                            <!-- Company Name -->
-                            <div class="form-group">
-                                <label for="companyName">Company Name</label>
-                                <input type="text" id="companyName" name="companyName" class="form-control" required />
-                            </div>
+                      <form id="companyForm" action="<%=request.getContextPath()%>/admin/saveCompanydetails" method="post">
 
-                            <!-- Last Day to Register -->
-                            <div class="form-group">
-                                <label for="lastDayToRegister">Last Day to Register</label>
-                                <input type="date" id="lastDayToRegister" name="lastDayToRegister" class="form-control" required />
-                            </div>
+    <!-- Company Name -->
+    <div class="form-group">
+        <label for="companyName">Company Name</label>
+        <input type="text" id="companyName" name="companyName" class="form-control" required />
+    </div>
 
-                            <!-- Position -->
-                            <div class="form-group">
-                                <label for="position">Position</label>
-                                <input type="text" id="position" name="position" class="form-control" required />
-                            </div>
+    <!-- Last Day to Register -->
+    <div class="form-group">
+        <label for="lastDayToRegister">Last Day to Register</label>
+        <input type="date" id="lastDayToRegister" name="lastDayToRegister" class="form-control" required />
+    </div>
 
-                            <!-- Qualification -->
-                            <div class="form-group">
-                                <label for="qualification">Qualification</label>
-                                <input type="text" id="qualification" name="qualification" class="form-control" required />
-                            </div>
+ 
+    <!-- Qualification -->
+    <div class="form-group">
+        <label for="qualification">Qualification</label>
+        <input type="text" id="qualification" name="qualification" class="form-control" required />
+    </div>
 
-                            <!-- Package -->
-                            <div class="form-group">
-                                <label for="packageOffered">Package</label>
-                                <input type="text" id="packageOffered" name="packageOffered" class="form-control" required />
-                            </div>
+    <!-- Package -->
+    <div class="form-group">
+        <label for="packageOffered">Package</label>
+        <input type="text" id="packageOffered" name="packageOffered" class="form-control" required />
+    </div>
 
-                            <!-- Location -->
-                            <div class="form-group">
-                                <label for="location">Location</label>
-                                <input type="text" id="location" name="location" class="form-control" required />
-                            </div>
+    <!-- Location -->
+    <div class="form-group">
+        <label for="location">Location</label>
+        <input type="text" id="location" name="location" class="form-control" required />
+    </div>
 
-                            <button type="submit" class="btn btn-primary btn-block">Save Company</button>
-                        </form>
+    <!-- Google Form Link -->
+    <div class="form-group">
+        <label for="googleFormLink">Google Form Link</label>
+        <div class="input-group">
+            <input type="url" id="googleFormLink" name="googleFormLink" class="form-control" placeholder="Paste Google Form URL here" required />
+            <div class="input-group-append">
+                <a href="https://forms.google.com" target="_blank" class="btn btn-primary">Create Google Form</a>
+            </div>
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary btn-block">Save Company</button>
+</form>
+                      
                     </div>
                 </div>
             </div>
