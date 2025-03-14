@@ -27,6 +27,9 @@ public class LoginVO {
 	@Column(name = "enabled")
 	private String enabled;
 
+	@Column(name ="reset_token")
+	private String resetToken;
+	
 	public int getId() {
 		return id;
 	}
@@ -66,5 +69,11 @@ public class LoginVO {
 	public void setEnabled(String enabled) {
 		this.enabled = enabled;
 	}
-
+	
+	public String getresetToken(){
+		return resetToken;
+	}
+	public void setresetToken(String resetToken){
+		this.resetToken =resetToken;
+	}
 }

@@ -15,4 +15,22 @@ public class LoginServiceImpl implements LoginService {
 	@Autowired
 	private LoginDAO loginDAO;
 
+	@Override
+	public LoginVO findByUsername(String email) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void save(LoginVO loginVO) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void updateUser(LoginVO loginVO) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

@@ -45,6 +45,10 @@
                         <span key="t-layouts">About Us</span>
                     </a>
                 </li>
+                <li><a class="dropdown-item text-danger" href="/logout">
+                        <i class="bx bx-power-off font-size-16 align-middle me-1 text-danger"></i>
+                        <span key="t-logout">Logout</span>
+                    </a></li>
 			</ul>
 
 			
