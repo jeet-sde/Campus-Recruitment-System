@@ -113,19 +113,7 @@
             </div>
         </div>
     </div>
-    <div class="col-md-6 col-lg-6">
-        <div class="card shadow-sm border-0">
-            <div class="card-body text-center">
-                <h4 class="text-uppercase">abc</h4>
-                <p><i class="fa fa-briefcase"></i> PRODUCT Based</p>
-                <p><i class="fa fa-money-bill"></i> CTC: 10,00,00,000</p>
-                <p><i class="fa fa-calendar"></i> Date: 07 dec 2026</p>
-                <button class="btn badge-custom">Upcoming</button>
-            </div>
-        </div>
-    </div>
-</div>
-                
+         
     
            
           
