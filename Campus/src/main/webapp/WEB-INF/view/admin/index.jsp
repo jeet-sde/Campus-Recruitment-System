@@ -128,83 +128,84 @@
                         </div>
 
                        
+<!-- Include Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-                    <!-- Previous Company Visits -->
-                    <div class="row mt-4">
-                        <div class="col-lg-12">
-                            <div class="card shadow-sm">
-                                <div class="card-body">
-                                    <h5 class="card-title mb-3">Previous Company Visits</h5>
-                                    <div class="table-responsive">
-                                        <table id="companyVisitsTable" class="table table-striped table-hover">
-                                            <thead class="table-dark">
-                                                <tr>
-                                                    <th>#</th>
-                                                    <th>Company Name</th>
-                                                    <th>Visit Date</th>
-                                                    <th>Job Role</th>
-                                                    <th>Package (LPA)</th>
-                                                   
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>1</td>
-                                                    <td>valorx</td>
-                                                    <td>2025</td>
-                                                    <td>Multiple role</td>
-                                                    <td>7 LPA</td>
-                                                    
-                                                </tr>
-                                                <tr>
-                                                    <td>2</td>
-                                                    <td>IT solution</td>
-                                                    <td>2025</td>
-                                                    <td>software Engineer</td>
-                                                    <td>3-5 LPA</td>
-                                                   
-                                                </tr>
-                                                  <tr>
-                                                    <td>2</td>
-                                                    <td>medkart</td>
-                                                    <td>2025</td>
-                                                    <td>associate software Engineer</td>
-                                                    <td>4 LPA</td>
-                                                   
-                                                </tr>
-                                                      <tr>
-                                                    <td>3</td>
-                                                    <td>abc</td>
-                                                    <td>2025</td>
-                                                    <td>software Engineer</td>
-                                                    <td>3-5 LPA</td>
-                                                   
-                                                </tr>
-                                                      <tr>
-                                                    <td>4</td>
-                                                    <td>abc</td>
-                                                    <td>2025</td>
-                                                    <td>software Engineer</td>
-                                                    <td>3-5 LPA</td>
-                                                   
-                                                </tr>
-                                                      <tr>
-                                                    <td>5</td>
-                                                    <td>abc</td>
-                                                    <td>2025</td>
-                                                    <td>software Engineer</td>
-                                                    <td>3-5 LPA</td>
-                                                   
-                                                </tr>
-                                               </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Previous Company Visits -->
+<!-- Chart Container -->
+<div class="row mt-4">
+    <div class="col-lg-12">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title mb-3">Company Visit Trends (2019-2025)</h5>
+                <canvas id="companyTrendChart"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
 
+<script>
+    // Yearly Data
+    const years = [2019, 2020, 2021, 2022, 2023, 2024, 2025];
+    const totalCompanies = [10, 12, 15, 18, 20, 22, 25]; // Total companies visited each year
+    const avgPackage = [7, 6.8, 6.5, 6.7, 7.2, 7.5, 8]; // Average LPA each year
+    const itSectorCompanies = [6, 7, 10, 12, 14, 16, 18]; // IT Companies count
+    const otherSectorCompanies = totalCompanies.map((val, index) => val - itSectorCompanies[index]); // Other Sectors
+
+    // Create Chart
+    const ctx = document.getElementById("companyTrendChart").getContext("2d");
+    new Chart(ctx, {
+        type: "line",
+        data: {
+            labels: years,
+            datasets: [
+                {
+                    label: "Total Companies Visited",
+                    data: totalCompanies,
+                    borderColor: "#FF5733",
+                    backgroundColor: "rgba(255, 87, 51, 0.2)",
+                    borderWidth: 2,
+                    fill: true
+                },
+                {
+                    label: "Average Package (LPA)",
+                    data: avgPackage,
+                    borderColor: "#4CAF50",
+                    backgroundColor: "rgba(76, 175, 80, 0.2)",
+                    borderWidth: 2,
+                    fill: true
+                },
+                {
+                    label: "IT Sector Companies",
+                    data: itSectorCompanies,
+                    borderColor: "#2196F3",
+                    backgroundColor: "rgba(33, 150, 243, 0.2)",
+                    borderWidth: 2,
+                    fill: false
+                },
+                {
+                    label: "Other Sector Companies",
+                    data: otherSectorCompanies,
+                    borderColor: "#FFC107",
+                    backgroundColor: "rgba(255, 193, 7, 0.2)",
+                    borderWidth: 2,
+                    fill: false
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: { position: "top" }
+            },
+            scales: {
+                y: { title: { display: true, text: "Count / LPA" }, beginAtZero: true },
+                x: { title: { display: true, text: "Year" } }
+            }
+        }
+    });
+</script>
+
+                
                 </div>
             </div>
 
