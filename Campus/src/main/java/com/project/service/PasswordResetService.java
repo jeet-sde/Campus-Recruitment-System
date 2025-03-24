@@ -68,4 +68,9 @@ public class PasswordResetService {
         }
         return false;
     }
+
+	public LoginVO getUserByToken(String token) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }
