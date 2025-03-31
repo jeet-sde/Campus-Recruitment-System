@@ -20,6 +20,7 @@
 					<ul class="sub-menu mm-collapse" aria-expanded="false">
 						<li><a href="states" key="t-g-maps">State</a></li>
 						<li><a href="city" key="t-v-maps">City</a></li>
+						
 					</ul></li>
 					
 					
@@ -38,6 +39,9 @@
 					</ul></li>
 					<li>  <a href="insertCompany" class="waves-effect"> <i
 						class="bx bxs-user-detail"></i> <span key="t-layouts">insert Company</span>
+				</a></li>
+				<li>  <a href="upcoming" class="waves-effect"> <i
+						class="bx bxs-user-detail"></i> <span key="t-layouts">Upcoming Company</span>
 				</a></li>
 					 <li>
                     <a href="${pageContext.request.contextPath}/admin/about-us" class="waves-effect">
