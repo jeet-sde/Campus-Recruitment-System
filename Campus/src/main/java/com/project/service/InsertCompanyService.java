@@ -9,7 +9,7 @@ public interface InsertCompanyService {
     void saveCompany1(InsertCompanyVO companyVO);
     List<InsertCompanyVO> findAll();
 	List<InsertCompanyVO> getAllCompanies();
-	static InsertCompanyController findById(Long companyId) {
+	static InsertCompanyController findById(int companyId) {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -17,6 +17,7 @@ public interface InsertCompanyService {
 		// TODO Auto-generated method stub
 		
 	}
+	int countCompany();
 	
 	
 }

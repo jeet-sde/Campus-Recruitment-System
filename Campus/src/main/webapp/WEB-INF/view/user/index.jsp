@@ -68,7 +68,7 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h4 class="mb-sm-0 font-size-18">Welcome Back!</h4>
+                               
                             </div>
                         </div>
                     </div>
@@ -77,51 +77,245 @@
                 <h2 class="fw-bold">Welcome to <span class="text-warning">Placement Portal</span></h2>
                 <p>Here you get all the details about upcoming companies visiting our college.</p>
                 <div class="row">
-    <!-- First Card -->
-    <div class="col-md-6 col-lg-6">
-        <div class="card shadow-sm border-0">
-            <div class="card-body text-center">
-                <h4 class="text-uppercase">Valorx</h4>
-                <p><i class="fa fa-briefcase"></i> Product Based</p>
-                <p><i class="fa fa-money-bill"></i> 7 lpa</p>
-                <p><i class="fa fa-calendar"></i> Date: 02 Feb 2022</p>
-                <button class="btn badge-custom">Upcoming</button>
+                
+                
+                <!-- Current Companies -->
+<div class="col-xl-4 col-md-6">
+    <div class="card mini-stats-wid shadow-lg border-0 position-relative overflow-hidden" 
+         style="background: linear-gradient(135deg, #1e3c72, #2a5298); color: white; border-radius: 15px;">
+        <div class="card-body">
+            <div class="d-flex align-items-center">
+                <div class="flex-grow-1">  
+                    <p class="fw-bold text-uppercase mb-1">Current Companies</p>
+                    <h4 class="mb-0 text-white" id="totalCompanies">0</h4>
+                </div>
+                <div class="icon-container d-flex align-items-center justify-content-center">
+                    <i class="bx bx-buildings font-size-32 text-white"></i>
+                </div>
             </div>
-        </div>
-    </div>
-
-    <!-- Second Card -->
-    <div class="col-md-6 col-lg-6">
-        <div class="card shadow-sm border-0">
-            <div class="card-body text-center">
-                <h4 class="text-uppercase">xyz</h4>
-                <p><i class="fa fa-briefcase"></i> PRODUCT Based</p>
-                <p><i class="fa fa-money-bill"></i> CTC: 7 lpa</p>
-                <p><i class="fa fa-calendar"></i> Date: 12 dec 2026</p>
-                <button class="btn badge-custom">Upcoming</button>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-6 col-lg-6">
-        <div class="card shadow-sm border-0">
-            <div class="card-body text-center">
-                <h4 class="text-uppercase">tcs</h4>
-                <p><i class="fa fa-briefcase"></i> Service Based</p>
-                <p><i class="fa fa-money-bill"></i> CTC: 4-7 lpa</p>
-                <p><i class="fa fa-calendar"></i> Date: 11 dec 2026</p>
-                <button class="btn badge-custom">Upcoming</button>
-            </div>
-        </div>
-    </div>
-         
-    
-           
-          
-
         </div>
     </div>
 </div>
-                    
+
+<!-- Upcoming Companies -->
+<div class="col-12 mt-4">
+    <h4 class="text-center mb-3 text-warning">Upcoming Companies</h4>
+    <div class="row">
+        <div class="col-md-6 col-lg-6">
+            <div class="card shadow-lg border-0 position-relative overflow-hidden"
+                 style="background: linear-gradient(135deg, #1e3c72, #2a5298); color: white; border-radius: 15px;">
+                <div class="card-body text-center">
+                    <h4 class="text-uppercase text-white">valorx</h4>
+                    <p><i class="fa fa-briefcase"></i> IT Services</p>
+                    <p><i class="fa fa-money-bill"></i> 7 LPA</p>
+                    <p><i class="fa fa-calendar"></i> Date: 25th April 2025</p>
+                    <p><i class="fa fa-user"></i> Position: Software Engineer</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-6">
+            <div class="card shadow-lg border-0 position-relative overflow-hidden"
+                 style="background: linear-gradient(135deg, #1e3c72, #2a5298); color: white; border-radius: 15px;">
+                <div class="card-body text-center">
+                    <h4 class="text-uppercase text-white">neo</h4>
+                    <p><i class="fa fa-briefcase"></i> E-Commerce</p>
+                    <p><i class="fa fa-money-bill"></i> 5 LPA</p>
+                    <p><i class="fa fa-calendar"></i> Date: 30th April 2025</p>
+                    <p><i class="fa fa-user"></i> Position: Cloud Engineer</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-6 mt-4">
+            <div class="card shadow-lg border-0 position-relative overflow-hidden"
+                 style="background: linear-gradient(135deg, #1e3c72, #2a5298); color: white; border-radius: 15px;">
+                <div class="card-body text-center">
+                    <h4 class="text-uppercase text-white">zulu</h4>
+                    <p><i class="fa fa-briefcase"></i> Software Development</p>
+                    <p><i class="fa fa-money-bill"></i> 8 LPA</p>
+                    <p><i class="fa fa-calendar"></i> Date: 10th May 2025</p>
+                    <p><i class="fa fa-user"></i> Position: Full Stack Developer</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Previous Company Visits -->
+<div class="row mt-4">
+    <div class="col-lg-12">
+        <div class="card shadow-lg border-0 position-relative overflow-hidden"
+             style="background: linear-gradient(135deg, #1e3c72, #2a5298); color: white; border-radius: 15px;">
+            <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h5 class="card-title text-white">Previous Company Visits</h5>
+                    <input type="text" id="searchInput" class="form-control w-25" placeholder="Search company...">
+                </div>
+                <div class="table-responsive">
+                    <table id="companyVisitsTable" class="table table-hover align-middle text-white">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>#</th>
+                                <th>Company Name</th>
+                                <th>Visit Year</th>
+                                <th>Job Role</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Valorx</td>
+                                <td>2025</td>
+                                <td>Multiple Roles</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>IT Solution</td>
+                                <td>2025</td>
+                                <td>Software Engineer</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Medkart</td>
+                                <td>2025</td>
+                                <td>Associate Software Engineer</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- Pagination Controls -->
+                <div class="d-flex justify-content-end mt-3">
+                    <button class="btn btn-outline-light btn-sm" id="prevPage">Previous</button>
+                    <span class="mx-2 text-white" id="pageIndicator">1</span>
+                    <button class="btn btn-outline-light btn-sm" id="nextPage">Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- CSS -->
+<style>
+    .icon-container {
+        width: 55px;
+        height: 55px;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        transition: transform 0.3s ease-in-out;
+    }
+    
+    .card:hover .icon-container {
+        transform: scale(1.1);
+    }
+    
+    .card {
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+    
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+    }
+    
+    /* Dark text inside table */
+    .table-hover tbody tr:hover {
+        background-color: rgba(255, 255, 255, 0.2) !important;
+    }
+    
+    .table-dark th {
+        background-color: rgba(0, 0, 0, 0.3) !important;
+        color: white !important;
+    }
+    
+    .table-responsive {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+        padding: 10px;
+    }
+</style>
+                
+
+
+
+
+<!-- CSS -->
+<style>
+    .icon-container {
+        width: 55px;
+        height: 55px;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        transition: transform 0.3s ease-in-out;
+    }
+    
+    .card:hover .icon-container {
+        transform: scale(1.1);
+    }
+    
+    .card {
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+    
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+    }
+</style>
+   
+<!-- End Previous Company Visits -->
+
+<!-- JavaScript -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let table = document.getElementById("companyVisitsTable").getElementsByTagName("tbody")[0];
+        let rows = Array.from(table.getElementsByTagName("tr"));
+        let searchInput = document.getElementById("searchInput");
+        let rowsPerPage = 2;
+        let currentPage = 1;
+
+        function filterTable() {
+            let query = searchInput.value.toLowerCase();
+            rows.forEach(row => {
+                let text = row.innerText.toLowerCase();
+                row.style.display = text.includes(query) ? "" : "none";
+            });
+        }
+
+        function paginateTable() {
+            let start = (currentPage - 1) * rowsPerPage;
+            let end = start + rowsPerPage;
+            rows.forEach((row, index) => {
+                row.style.display = index >= start && index < end ? "" : "none";
+            });
+            document.getElementById("pageIndicator").innerText = currentPage;
+        }
+
+        searchInput.addEventListener("input", filterTable);
+
+        document.getElementById("prevPage").addEventListener("click", function () {
+            if (currentPage > 1) {
+                currentPage--;
+                paginateTable();
+            }
+        });
+
+        document.getElementById("nextPage").addEventListener("click", function () {
+            if (currentPage * rowsPerPage < rows.length) {
+                currentPage++;
+                paginateTable();
+            }
+        });
+
+        paginateTable();
+    });
+</script>
+
+<!-- End Previous Company Visits -->
+                   
                 </div> <!-- container-fluid -->
             </div> <!-- page-content -->
         </div> <!-- main-content -->
@@ -138,6 +332,34 @@
     <script src="<%=request.getContextPath()%>/adminResource/js/app.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Ensure jQuery is included -->
 
+ <script>
+        function fetchDashboardData() {
+            fetch('/user/index/data')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('totalCompanies').textContent = data.totalCompanies;
+                    updateChart(data.totalStudents, data.totalCompanies);
+                })
+                .catch(error => console.error('Error fetching data:', error));
+        }
+
+        function updateChart(students, companies) {
+            const ctx = document.getElementById('statsChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Companies'],
+                    datasets: [{
+                        data: [ companies],
+                        backgroundColor: ['#007bff', '#28a745'],
+                        hoverBackgroundColor: ['#0056b3', '#1d8231'],
+                    }]
+                }
+            });
+        }
+
+        window.onload = fetchDashboardData;
+    </script>
 <script>
 $(document).ready(function () {
     $(".applied-checkbox").on("change", function () {

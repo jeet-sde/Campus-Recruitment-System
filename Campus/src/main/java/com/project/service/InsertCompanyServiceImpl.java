@@ -13,6 +13,11 @@ import com.project.repository.InsertCompanyRepository;
 @Transactional
 public class InsertCompanyServiceImpl implements InsertCompanyService {
 
+
+    @Autowired
+    
+    private InsertCompanyRepository insertCompanyRepository;
+
     @Autowired
     private InsertCompanyDAO companyDAO;
     
@@ -36,5 +41,11 @@ public class InsertCompanyServiceImpl implements InsertCompanyService {
 		return companyRepository.findAll();
 		
 	}
+
+	@Override
+	public int countCompany() {
+		return (int) insertCompanyRepository.count(); // Correctly counts total companies
+    }
+	}
 	
-}
+
